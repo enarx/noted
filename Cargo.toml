@@ -1,0 +1,25 @@
+[package]
+name = "noted"
+version = "0.1.0"
+authors = ["Nathaniel McCallum <nathaniel@congru.us>"]
+license = "Apache-2.0"
+edition = "2018"
+homepage = "https://github.com/enarx/noted"
+repository = "https://github.com/enarx/noted"
+description = "Library for creating ELF notes"
+readme = "README.md"
+keywords = ["elf", "note", "notes"]
+categories = ["development-tools", "embedded", "encoding", "hardware-support", "no-std"]
+exclude = [ ".gitignore", ".github/*" ]
+
+[badges]
+# See https://doc.rust-lang.org/cargo/reference/manifest.html#the-badges-section
+github = { repository = "enarx/noted", workflow = "test" }
+#github = { repository = "enarx/noted", workflow = "lint" }
+maintenance = { status = "actively-developed" }
+is-it-maintained-issue-resolution = { repository = "enarx/noted" }
+is-it-maintained-open-issues = { repository = "enarx/noted" }
+
+[dev-dependencies]
+crt0stack = "0"
+goblin = "0"
