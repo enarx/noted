@@ -12,12 +12,15 @@
 //! use noted::noted;
 //! use goblin::Object;
 //!
+//! const YYYYY: &str = "yyyyy";
+//! const TWO: u32 = 2;
+//!
 //! noted! {
 //!     section = ".note.noted";
 //!
-//!     static FOO<"xxxxxxxx", 1>: [u8; 4] = [1, 2, 3, 4];
-//!     static BAR<"yyyyy", 2>: u64 = 7;
-//!     static BAZ<"zzz", 3>: u32 = 8;
+//!     static FOO<"xxxxxxxx", 1, [u8; 4]> = [1, 2, 3, 4];
+//!     static BAR<YYYYY, TWO, u64> = 7;
+//!     static BAZ<"zzz", 3, u32> = 8;
 //! }
 //!
 //! fn main() {
@@ -43,11 +46,11 @@
 //!     assert_eq!(3, notes.len());
 //!
 //!     assert_eq!(notes[0].n_type, 1);
-//!     assert_eq!(notes[1].n_type, 2);
+//!     assert_eq!(notes[1].n_type, TWO);
 //!     assert_eq!(notes[2].n_type, 3);
 //!
 //!     assert_eq!(notes[0].name, "xxxxxxxx");
-//!     assert_eq!(notes[1].name, "yyyyy");
+//!     assert_eq!(notes[1].name, YYYYY);
 //!     assert_eq!(notes[2].name, "zzz");
 //!
 //!     assert_eq!(notes[0].desc, &[1, 2, 3, 4]);
@@ -123,7 +126,7 @@ macro_rules! noted {
         @internal $section:literal
 
         $(#[$attr:meta])*
-        $vis:vis static $symb:ident<$name:literal, $type:literal>: $kind:ty = $desc:expr;
+        $vis:vis static $symb:ident<$name:expr, $type:expr, $kind:ty> = $desc:expr;
 
         $($next:tt)*
     ) => {
