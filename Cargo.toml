@@ -4,6 +4,7 @@ version = "1.0.0"
 authors = ["Nathaniel McCallum <nathaniel@profian.com>"]
 license = "Apache-2.0"
 edition = "2018"
+rust-version = "1.56"
 homepage = "https://github.com/enarx/noted"
 repository = "https://github.com/enarx/noted"
 description = "Library for creating ELF notes"
