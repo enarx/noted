@@ -1,7 +1,7 @@
 [![Workflow Status](https://github.com/enarx/noted/workflows/test/badge.svg)](https://github.com/enarx/noted/actions?query=workflow%3A%22test%22)
 [![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/enarx/noted.svg)](https://isitmaintained.com/project/enarx/noted "Average time to resolve an issue")
 [![Percentage of issues still open](https://isitmaintained.com/badge/open/enarx/noted.svg)](https://isitmaintained.com/project/enarx/noted "Percentage of issues still open")
-![Maintenance](https://img.shields.io/badge/maintenance-activly--developed-brightgreen.svg)
+![Maintenance](https://img.shields.io/badge/maintenance-actively--developed-brightgreen.svg)
 
 # noted
 
