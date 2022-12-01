@@ -2,7 +2,7 @@ on: pull_request
 name: lint
 jobs:
   commit-message:
-    uses: enarx/.github/.github/workflows/commisery.yml@master
+    uses: enarx/.github/.github/workflows/commisery.yml@main
 
   fmt:
     name: cargo fmt
